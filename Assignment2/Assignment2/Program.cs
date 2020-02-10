@@ -1,4 +1,3 @@
-﻿using Assignment2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,19 +6,23 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
-   
-    
     class Program
     {
         static void Main(string[] args)
         {
-        Employee emp = new HR();
-        Employee emp1 = new Developer();
+            HR hr = new HR();
 
-        Console.WriteLine("HR Salary :" + emp.CalculateSalary());
-        Console.WriteLine("Developer salary :"+ emp1.CalculateSalary());
+            Developer dev = new Developer();
 
-        Console.ReadKey();
+
+
+            Console.WriteLine("Salary of Hr is " + hr.CalculateSalary());
+
+            Console.WriteLine("Salary of Developer is " + dev.CalculateSalary());
+
+
+
+            Console.ReadKey();
         }
     }
 }
