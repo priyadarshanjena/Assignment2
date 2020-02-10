@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,46 +6,46 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
-    public abstract class Employee
+     public abstract class Employee
     {
         public int EmpId;
         public string EmpName;
         public string Designation;
-        public int Exp;
-        public double AnnualSal;
-        public DateTime Date;
+        public int Experience;
+        public double AnnualSalary;
+        public DateTime JoiningDate;
 
         public abstract double CalculateSalary();
     }
 
     public class HR : Employee
     {
-        private double basicsalary;
+        double hrBasicsalary;
 
 
         public override double CalculateSalary()
         {
-            double basicsalary = 8000;
-            int Exp = 4;
-            return basicsalary * 1000 * (Exp);
+            double hrBasicsalary = 8000;
+            this.Experience= 4;
+            return hrBasicsalary +( 1000 *Experience );
         }
 
-       
+
     }
     public class Developer : Employee
     {
-        private double basicsalary1;
+        double devBasicsalary;
 
         public override double CalculateSalary()
         {
-            
-            
-                double basicsalary1 = 8000;
-                int Exp = 5;
-                return basicsalary1 * 2000 * Exp;
-            
+
+
+            double devBasicsalary = 8000;
+            this.Experience = 5;
+            return devBasicsalary +(2000 * Experience);
+
         }
 
-       
+
     }
 }
